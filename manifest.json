@@ -1,0 +1,21 @@
+{
+
+	"description": "Switch between light and dark mode in Help Scout",
+	"manifest_version": 2,
+	"name": "HS Dark Mode",
+	"version": "1.0",
+	"homepage_url": "https://weglot.com",
+	"icons": {
+	  "48": "icons/night-mode-48.png",
+	  "96": "icons/night-mode-96.png"
+	},
+  
+	"content_scripts": [
+	  {
+		"matches": ["https://secure.helpscout.net/*"],
+		"js": ["hs-darkmode.js"]
+	  }
+	]
+  
+  }
+  

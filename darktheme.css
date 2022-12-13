@@ -1,0 +1,70 @@
+/* Color spaces */
+
+:root {
+    --charcoal800: #1d2b36;
+    --charcoal500: #394956;
+    --basicDarkColor: #D9D9D9;
+    --basicDarkBorder: white;
+
+    --layoutBackground: var(var(--charcoal500), red);
+    --layoutBackgroundLighter: var(var(--charcoal800), red);
+    --layoutColor: var(var(--basicDarkColor), red);
+    --layoutBorderLight: var(var(--basicDarkBorder), red);    
+}
+
+
+
+body,
+.chzn-drop,
+.dropdown-menu,
+.redactor_dropdown {
+    background-color: var(--layoutBackground);
+    color: var(--basicDarkColor);
+}
+
+#redactor_modal_overlay,
+.c-app-layout__content,
+.c-convo-toolbar,
+.convo-actions,
+.dnZWQz,
+.c-profile__card,
+.apps-history .sidebar-app.open,
+.js-copyEmail hide,
+article.singleLine {
+    background-color: var(--layoutBackground);
+}
+
+.c-app-layout,
+.header,
+.apps-history #properties ul.c-sb-list.c-sb-list--two-line li {
+    background-color: var(--layoutBackgroundLighter);
+}
+
+.convo-actions > li a > i,
+.convo-actions > li a:hover i,
+#tktInfo h1,
+#tktSubject > #subject,
+.messageBody,
+.sidebar-heading,
+.nav-stacked i,
+.nav-stacked > li > a,
+#sidebarProfile .c-profile__card a:not(.detail):not(.show-more):not(.custom-property-url),
+.diTRlJ,
+#sidebarProfile .c-profile__name,
+.apps-history h1,
+.apps-history #properties ul.c-sb-list.c-sb-list--two-line li,
+.apps-history .inner {
+    color: var(--basicDarkColor);
+}
+
+.convo-actions > li .caret,
+.chzn-drop, 
+.dropdown-menu, 
+.redactor_dropdown {
+    border-color: var(--basicDarkBorder);
+}
+
+.c-convo-toolbar,
+#tkContent > article {
+    border-color: var(--layoutBorderLight);
+}
