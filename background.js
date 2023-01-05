@@ -8,7 +8,6 @@ const helpscout = "https://secure.helpscout.net"
 
 chrome.action.onClicked.addListener(async (tab) => {
     if (tab.url.startsWith(helpscout)) {
-        console.log("OK to load CSS");
         const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
         const nextState = prevState === "ON" ? "OFF" : "ON"
 
