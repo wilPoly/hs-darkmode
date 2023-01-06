@@ -1,8 +1,13 @@
 /* Color spaces */
 
 :root {
-    --charcoal800: #1d2b36;
     --charcoal500: #394956;
+    --charcoal600: #2a3b47;
+    --charcoal700: #253540;
+    --charcoal800: #1d2b36;
+
+    --blue900: #143d57;
+    --blue500: #3197d6;
     --basicDarkColor: #D9D9D9;
     --basicDarkBorder: white;
 
@@ -10,7 +15,11 @@
     /* --layoutBackground: var(--charcoal500); */
     --layoutBackgroundLighter: var(--charcoal800, red);
     --layoutColor: var(--basicDarkColor, red);
-    --layoutBorderLight: var(--basicDarkBorder, red);    
+    /* --layoutBorderLight: var(--basicDarkBorder, red); */
+    --layoutBorderLight: var(--charcoal700, red);
+
+    --headerBackground: var(--blue900, red);
+    --headerColor: var(--blue500, red);
 }
 
 
@@ -21,6 +30,45 @@ body,
 .redactor_dropdown {
     background-color: var(--layoutBackground) !important;
     color: var(--basicDarkColor) !important;
+}
+
+/* Header */
+#header {
+    background-color: var(--headerBackground) !important;
+}
+.nav-main>li>a, .nav-secondary>li>a {
+    color: var(--headerColor) !important;
+}
+
+
+/* Dropdown menus */
+.chzn-drop .chzn-results>.active-result,
+.dropdown-menu li>a:not(.search-choice-close):not(.new-docs-collection-link),
+.dropdown-menu li>button.is-style-link:not(.search-choice-close),
+.dropdown-menu.textboxlist-autocomplete>ul>li,
+.redactor_dropdown>a {
+    color: var(--basicDarkColor) !important;
+}
+
+.chzn-drop .chzn-results>.highlighted,
+.dropdown-menu li:hover>a, .dropdown-menu li:hover>button.is-style-link,
+.dropdown-menu li>a.hover,
+.dropdown-menu li>a:focus,
+.dropdown-menu li>a:hover,
+.dropdown-menu li>button.is-style-link.hover,
+.dropdown-menu li>button.is-style-link:focus,
+.dropdown-menu li>button.is-style-link:hover,
+.dropdown-menu.textboxlist-autocomplete>ul>li.textboxlist-autocomplete-result-focus,
+.dropdown-menu.textboxlist-autocomplete>ul>li:focus,
+.dropdown-menu.textboxlist-autocomplete>ul>li:hover,
+.dropdown-submenu:focus>a,
+.dropdown-submenu:focus>button.is-style-link,
+.dropdown-submenu:hover>a,
+.dropdown-submenu:hover>button.is-style-link,
+.redactor_dropdown>a:focus,
+.redactor_dropdown>a:hover,
+#sidebarProfile .header {
+    background-color: var(--charcoal800) !important;
 }
 
 #redactor_modal_overlay,
@@ -36,7 +84,6 @@ article.singleLine {
 }
 
 .c-app-layout,
-.header,
 .apps-history #properties ul.c-sb-list.c-sb-list--two-line li {
     background-color: var(--layoutBackgroundLighter) !important;
 }
@@ -59,13 +106,13 @@ article.singleLine {
 }
 
 .convo-actions > li .caret,
-.chzn-drop, 
-.dropdown-menu, 
+.chzn-drop,  
 .redactor_dropdown {
     border-color: var(--basicDarkBorder) !important;
 }
 
 .c-convo-toolbar,
-#tkContent > article {
+#tkContent > article,
+.dropdown-menu {
     border-color: var(--layoutBorderLight) !important;
 }
