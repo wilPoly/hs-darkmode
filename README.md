@@ -5,13 +5,13 @@ Service workers are not supported in Firefox (see [https://github.com/mozilla/we
 As a workaround, you can create two manifests.
 **For Chrome:**
 ```json
-background: {  
+"background": {  
     "service_worker": "path.js"  
     }  
 ```
 **For Firefox**
 ```json
-background: {  
+"background": {  
     "scripts": ["path.js"]  
     }
 ```

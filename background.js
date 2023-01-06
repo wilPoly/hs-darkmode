@@ -17,12 +17,12 @@ chrome.action.onClicked.addListener(async (tab) => {
         });
 
         if (nextState === "ON") {
-            console.log("Load CSS");
             await chrome.scripting.insertCSS({
                 files: ["darktheme.css"],
                 target: { tabId: tab.id },
             });
-            
+            console.log("CSS loaded");
+
         } else if (nextState === "OFF") {
             await chrome.scripting.removeCSS({
                 files: ["darktheme.css"],

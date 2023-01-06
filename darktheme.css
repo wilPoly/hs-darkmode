@@ -6,10 +6,11 @@
     --basicDarkColor: #D9D9D9;
     --basicDarkBorder: white;
 
-    --layoutBackground: var(var(--charcoal500), red);
-    --layoutBackgroundLighter: var(var(--charcoal800), red);
-    --layoutColor: var(var(--basicDarkColor), red);
-    --layoutBorderLight: var(var(--basicDarkBorder), red);    
+    --layoutBackground: var(--charcoal500, red);
+    /* --layoutBackground: var(--charcoal500); */
+    --layoutBackgroundLighter: var(--charcoal800, red);
+    --layoutColor: var(--basicDarkColor, red);
+    --layoutBorderLight: var(--basicDarkBorder, red);    
 }
 
 
@@ -18,8 +19,8 @@ body,
 .chzn-drop,
 .dropdown-menu,
 .redactor_dropdown {
-    background-color: var(--layoutBackground);
-    color: var(--basicDarkColor);
+    background-color: var(--layoutBackground) !important;
+    color: var(--basicDarkColor) !important;
 }
 
 #redactor_modal_overlay,
@@ -31,13 +32,13 @@ body,
 .apps-history .sidebar-app.open,
 .js-copyEmail hide,
 article.singleLine {
-    background-color: var(--layoutBackground);
+    background-color: var(--layoutBackground) !important;
 }
 
 .c-app-layout,
 .header,
 .apps-history #properties ul.c-sb-list.c-sb-list--two-line li {
-    background-color: var(--layoutBackgroundLighter);
+    background-color: var(--layoutBackgroundLighter) !important;
 }
 
 .convo-actions > li a > i,
@@ -54,17 +55,17 @@ article.singleLine {
 .apps-history h1,
 .apps-history #properties ul.c-sb-list.c-sb-list--two-line li,
 .apps-history .inner {
-    color: var(--basicDarkColor);
+    color: var(--basicDarkColor) !important;
 }
 
 .convo-actions > li .caret,
 .chzn-drop, 
 .dropdown-menu, 
 .redactor_dropdown {
-    border-color: var(--basicDarkBorder);
+    border-color: var(--basicDarkBorder) !important;
 }
 
 .c-convo-toolbar,
 #tkContent > article {
-    border-color: var(--layoutBorderLight);
+    border-color: var(--layoutBorderLight) !important;
 }
